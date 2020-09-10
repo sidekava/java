@@ -1,9 +1,19 @@
-프로그래밍 3강
+프로그래밍 4강
 
-1. 컴퓨터 프로그램이란?
-컴퓨터를 이용한 절차를 만들어 놓은 것
+1. CPU?
+중앙처리장치
 
 1-1. cpu 구조
-alu와 cu가 있다.
-alu는 연산, cu는 절차
+core, 프로세서 그래픽, L3 cache, System Agent, Memory Controller 등으로 이루어져 있음
+
+core의 구조
+레지스터, ALU + CU, 로드버퍼, 저장버퍼, L1 cache, L2 cache로 이루어져 있음.
+
+ALU는 산술, 논리 연산
+CU는 흐름을 제어
+레지스터는 임시저장소
+
+
+
+
 
