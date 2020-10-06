@@ -1,0 +1,7 @@
+자바 7강 - 자바 플랫폼의 특징
+
+자바는 WORA를 구현하기 위해 나왔다.
+WORA(write once run anywhere)
+
+운영체제에 자바를 설치하면 단일하게 java API를 사용하게 된다.
+
