@@ -1,0 +1,5 @@
+17강 콘솔 문자열 출력 PrintStream
+
+우리는 문자열을 출력할 일이 많을 것이다.
+System.out.write로는 한 자씩 할 수 있다.
+OutputStream으로 해야 한다. print로 해야 한다. 
