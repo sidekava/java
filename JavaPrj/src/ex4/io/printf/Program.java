@@ -1,4 +1,4 @@
-package ex3.io.escape;
+package ex4.io.printf;
 
 public class Program {
 
@@ -18,12 +18,15 @@ public class Program {
 		System.out.println("│     성적 출력            │");
 		System.out.println("└────────────────┘");
 	
-		System.out.println("국어1 : 0");
-		System.out.println("국어2 : 0");
-		System.out.println("국어3 : 0");
-		System.out.println("총점 : 0");
-		System.out.println("평균 : 0.00");
-
+		System.out.printf("\t국어1 : %d\n", kor1);
+		System.out.printf("\t국어2 : %d\n", kor2);
+		System.out.printf("\t국어3 : %d\n", kor3);
+		System.out.printf("\t총점 : %d\n", total);
+		System.out.printf("\t평균 : %f\n", avg);
+		
+//		System.out.println(80); //80을 기호 80으로 이해
+//		System.out.write(80); //80을 코드값 80으로 이해
+//		System.out.flush(); //write 사용 시엔 반드시 flush 사용
 		
 		/* 18강
 		 * \b 백스페이스
@@ -36,7 +39,11 @@ public class Program {
 		 * \\ 역슬래쉬 삽입
 		 * \는 단독으로 쓰일 수 없다. 그래서 역슬래시를 사용하고 싶다면 \\ 역슬래시를 연속으로 두개 쓰면 하나만 출력된다.
 		 */
-
+		
+		/*
+		 * 19강
+		 * System.out.printl
+		 */
 		
 	}
 
