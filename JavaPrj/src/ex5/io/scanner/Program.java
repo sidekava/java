@@ -1,4 +1,6 @@
-package ex5.io.printf.copy;
+package ex5.io.scanner;
+
+import java.util.Scanner;
 
 public class Program {
 
@@ -7,14 +9,29 @@ public class Program {
 		int total;
 		float avg;
 		
+		Scanner scan = new Scanner(System.in);
+		
 		kor1 = 50;
 		kor2 = 60;
 		kor3 = 80;
 		
+		//------- 성적 입력 부분 ------------------------
+		System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
+		System.out.println("│     성적 입력            │");
+		System.out.println("└────────────────┘");
+		System.out.println("국어1 : ");
+		kor1 = scan.nextInt();
+		System.out.println("국어2 : ");
+		kor2 = scan.nextInt();
+		System.out.println("국어3 : ");
+		kor3 = scan.nextInt();
+		
+		//------- 성적 출력 부분 ------------------------
+		
 		total = kor1 + kor2 + kor3;
 		avg = total / 3 ;
 		//결과값이 190.00이 나오는데 그 이유는 정수를 정수로 나오기 때문
-		//------- 성적 출력 부분 ------------------------
+		
 		System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
 		System.out.println("│     성적 출력            │");
 		System.out.println("└────────────────┘");

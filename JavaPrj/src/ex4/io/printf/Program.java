@@ -13,16 +13,20 @@ public class Program {
 		
 		total = kor1 + kor2 + kor3;
 		avg = total / 3 ;
+		//결과값이 190.00이 나오는데 그 이유는 정수를 정수로 나오기 때문
 		//------- 성적 출력 부분 ------------------------
 		System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
 		System.out.println("│     성적 출력            │");
 		System.out.println("└────────────────┘");
+		
+		System.out.printf("%2$d %3$d %1$d\n", 10,13,45);
+		System.out.printf("%1$d %1$d %1$d\n", 10);
 	
-		System.out.printf("\t국어1 : %d\n", kor1);
-		System.out.printf("\t국어2 : %d\n", kor2);
-		System.out.printf("\t국어3 : %d\n", kor3);
-		System.out.printf("\t총점 : %d\n", total);
-		System.out.printf("\t평균 : %f\n", avg);
+		System.out.printf("\t국어1 : %3d\n", kor1);
+		System.out.printf("\t국어2 : %3d\n", kor2);
+		System.out.printf("\t국어3 : %3d\n", kor3);
+		System.out.printf("\t총점 : %3d\n", total);
+		System.out.printf("\t평균 : %6.2f\n", avg);
 		
 //		System.out.println(80); //80을 기호 80으로 이해
 //		System.out.write(80); //80을 코드값 80으로 이해
@@ -43,6 +47,23 @@ public class Program {
 		/*
 		 * 19강
 		 * System.out.printl
+		 */
+		
+		/*
+		 * 20강 형식지정자
+		 * % 1$ +0 20 .10 f 순
+		 * % : begin format specifier
+		 * 1$ : argument index(설정한 argument 순서대로 출력하지 않고 순서를 변경해서 출력할 때 index 지정)
+		 * +0 : flags
+		 * 20 : width(최소 길이)
+		 * .10 : percision(소수점 길이)
+		 * f : conversion
+		 * System.out.printf("1:%d\n2:%10d\n3:%-10d", 3, 3, 3);
+		 * 2:최소길이 10자리
+		 * System.out.printf("%5.2f\n", 87,98989);
+		 * 최소 5자리에 소수점 2자리. (자리 수 계산에 .도 포함)
+		 * 
+		 * 
 		 */
 		
 	}
