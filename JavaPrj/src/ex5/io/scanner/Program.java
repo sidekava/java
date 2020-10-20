@@ -1,5 +1,6 @@
 package ex5.io.scanner;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Program {
@@ -19,12 +20,12 @@ public class Program {
 		System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
 		System.out.println("│     성적 입력            │");
 		System.out.println("└────────────────┘");
-		System.out.println("국어1 : ");
-		kor1 = scan.nextInt();
-		System.out.println("국어2 : ");
-		kor2 = scan.nextInt();
-		System.out.println("국어3 : ");
-		kor3 = scan.nextInt();
+//		System.out.println("국어1 : ");
+//		kor1 = scan.nextInt();
+//		System.out.println("국어2 : ");
+//		kor2 = scan.nextInt();
+//		System.out.println("국어3 : ");
+//		kor3 = scan.nextInt();
 		
 		//------- 성적 출력 부분 ------------------------
 		
@@ -79,6 +80,35 @@ public class Program {
 		 * 2:최소길이 10자리
 		 * System.out.printf("%5.2f\n", 87,98989);
 		 * 최소 5자리에 소수점 2자리. (자리 수 계산에 .도 포함)
+		 * 
+		 * 
+		 */
+		
+		/*
+		 * 22강 산술, 대입 연산자
+		 * 산술 연산자
+		 * + 덧셈
+		 * - 뺄셈
+		 * * 곱셈
+		 * / 나눗셈
+		 * % 나머지
+		 * 
+		 * 단항 연산자
+		 * + 양수 연산자 ex) result = +1;
+		 * - 음수 연산자 ex) result = -result;
+		 * ++ 증가 연산자 
+		 * -- 감소 연산자
+		 * !  부정연산자 ex) !success
+		 * 
+		 * 증가와 감소는 전위와 후위가 있다.
+		 * 전위일경우 연산 후에 명령 수행
+		 * 후위일경우 명령 수행 후에 연산
+		 * ex
+		 * int i = 1;
+		 * System.out.print(i); //1
+		 * System.out.print(++i) //2
+		 * System.out.print(i++) //2
+		 * System.out.print(i) //3
 		 * 
 		 * 
 		 */
