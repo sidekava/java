@@ -1,4 +1,4 @@
-package ex5.io.scanner;
+package ex6.io.operator;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -20,8 +20,9 @@ public class Program {
 		System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
 		System.out.println("│     성적 입력            │");
 		System.out.println("└────────────────┘");
-//		System.out.println("국어1 : ");
-//		kor1 = scan.nextInt();
+		System.out.println("국어1 : ");
+		kor1 = scan.nextInt();
+		System.out.println(0<kor1 && kor1<=100);
 //		System.out.println("국어2 : ");
 //		kor2 = scan.nextInt();
 //		System.out.println("국어3 : ");
@@ -113,7 +114,21 @@ public class Program {
 		 * 
 		 */
 
-		
+		 /* 
+		  * 23강
+		  * 비교 연산자
+		  * == 같다
+		  * != 같지 않다
+		  * > ~보다 크다
+		  * >= ~보다 크거나 같다
+		  * < ~보다 작다
+		  * <= ~보다 작거나 같다
+		  * 
+		  * 논리 연산자
+		  * && 교집합 연산자
+		  * || 합집합 연산자
+		  * 
+		  */
 	}
 
 }
