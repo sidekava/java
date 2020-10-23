@@ -1,3 +1,4 @@
+.metadata/*
 .metadata/.log
 .metadata/version.ini
 .metadata/.mylyn/.tasks.xml.zip
