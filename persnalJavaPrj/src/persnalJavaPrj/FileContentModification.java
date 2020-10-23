@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 public class FileContentModification {
 	public static void main(String[] args) {
 		//파일 읽기
-		String fileName = "resource\\자바 번외 - 파일 내용 수정.txt";
+		String fileName = "resource\\자바 번외 - 파일 내용 수정2.txt";
 		File inputFile = new File(fileName);
 		String line;
 		try {

@@ -26,7 +26,8 @@ public class Program {
 		System.out.printf("\t국어2 : %3d\n", kor2);
 		System.out.printf("\t국어3 : %3d\n", kor3);
 		System.out.printf("\t총점 : %3d\n", total);
-		System.out.printf("\t평균 : %6.2f\n", avg);
+//		System.out.printf("\t평균 : %6.2f\n", avg);
+		System.out.printf("\t평균 : %d\n", avg);
 		
 //		System.out.println(80); //80을 기호 80으로 이해
 //		System.out.write(80); //80을 코드값 80으로 이해
