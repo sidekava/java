@@ -1,6 +1,5 @@
-package ex6.io.operator;
+package ex7.control1;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Program {
@@ -12,40 +11,42 @@ public class Program {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		kor1 = 50;
-		kor2 = 60;
-		kor3 = 80;
+		kor1 = 0;
+		kor2 = 0;
+		kor3 = 0;
 		
-		//------- 성적 입력 부분 ------------------------
-		System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
-		System.out.println("│     성적 입력            │");
-		System.out.println("└────────────────┘");
-		System.out.println("국어1 : ");
-		kor1 = scan.nextInt();
-		System.out.println(0<kor1 && kor1<=100);
-//		System.out.println("국어2 : ");
-//		kor2 = scan.nextInt();
-//		System.out.println("국어3 : ");
-//		kor3 = scan.nextInt();
-		
-		//------- 성적 출력 부분 ------------------------
-		
-		total = kor1 + kor2 + kor3;
-		avg = total / 3 ;
-		//결과값이 190.00이 나오는데 그 이유는 정수를 정수로 나오기 때문
-		
-		System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
-		System.out.println("│     성적 출력            │");
-		System.out.println("└────────────────┘");
-		
-		System.out.printf("%2$d %3$d %1$d\n", 10,13,45);
-		System.out.printf("%1$d %1$d %1$d\n", 10);
-	
-		System.out.printf("\t국어1 : %3d\n", kor1);
-		System.out.printf("\t국어2 : %3d\n", kor2);
-		System.out.printf("\t국어3 : %3d\n", kor3);
-		System.out.printf("\t총점 : %3d\n", total);
-		System.out.printf("\t평균 : %6.2f\n", avg);
+		while(true) {
+			//------- 성적 입력 부분 ------------------------
+			System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
+			System.out.println("│     성적 입력            │");
+			System.out.println("└────────────────┘");
+			System.out.println("국어1 : ");
+			kor1 = scan.nextInt();
+			System.out.println("국어2 : ");
+			kor2 = scan.nextInt();
+			System.out.println("국어3 : ");
+			kor3 = scan.nextInt();
+			
+			
+			//------- 성적 출력 부분 ------------------------
+			
+			total = kor1 + kor2 + kor3;
+			avg = total / 3 ;
+			//결과값이 190.00이 나오는데 그 이유는 정수를 정수로 나오기 때문
+			
+			System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
+			System.out.println("│     성적 출력            │");
+			System.out.println("└────────────────┘");
+			
+			System.out.printf("%2$d %3$d %1$d\n", 10,13,45);
+			System.out.printf("%1$d %1$d %1$d\n", 10);
+			
+			System.out.printf("\t국어1 : %3d\n", kor1);
+			System.out.printf("\t국어2 : %3d\n", kor2);
+			System.out.printf("\t국어3 : %3d\n", kor3);
+			System.out.printf("\t총점 : %3d\n", total);
+			System.out.printf("\t평균 : %6.2f\n", avg);
+		}
 		
 		
 		
