@@ -1,4 +1,4 @@
-package ex6.io.operator;
+package ex6.operator;
 
 import java.io.IOException;
 import java.util.Scanner;
