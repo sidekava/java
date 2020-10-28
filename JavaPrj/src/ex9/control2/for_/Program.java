@@ -1,4 +1,4 @@
-package ex8.control2.dowhile;
+package ex9.control2.for_;
 
 import java.util.Scanner;
 
@@ -55,12 +55,11 @@ public class Program {
 			System.out.println("│     성적 출력            │");
 			System.out.println("└────────────────┘");
 			
-			System.out.printf("%2$d %3$d %1$d\n", 10,13,45);
-			System.out.printf("%1$d %1$d %1$d\n", 10);
+//			for (int n = 1; n <= 3; i++)
+			for (int i = 0; i < 3; i++) {
+				System.out.printf("\t국어%d : %3d\n", 3 - i, kor1);
+			}
 			
-			System.out.printf("\t국어1 : %3d\n", kor1);
-			System.out.printf("\t국어2 : %3d\n", kor2);
-			System.out.printf("\t국어3 : %3d\n", kor3);
 			System.out.printf("\t총점 : %3d\n", total);
 			System.out.printf("\t평균 : %6.2f\n", avg);
 		}
