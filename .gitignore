@@ -182,3 +182,5 @@ persnalJavaPrj/bin/persnalJavaPrj/FileContentModification.class
 .metadata/.plugins/org.eclipse.core.resources/.root/8.tree
 .metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
 .metadata/
+.recommenders/caches/identified-project-coordinates.json
+.recommenders/caches/manual-mappings.json
