@@ -16,6 +16,7 @@ public class Program {
 		kor2 = 0;
 		kor3 = 0;
 		
+		종료:
 		while(true) {
 			//------- 성적 입력 부분 ------------------------
 			System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
@@ -28,7 +29,9 @@ public class Program {
 			System.out.print("\t >");
 			menu = scan.nextInt();
 			
-			if (menu == 1) {
+			switch (menu ) {
+			
+			case 1: 
 				//------- 성적 입력 부분 ------------------------
 				System.out.println("┌────────────────┐"); // \가 n을 출력문에서 탈출, 즉 escape 시켜준다.
 				System.out.println("│     성적 입력         │");
@@ -56,9 +59,10 @@ public class Program {
 						System.out.println("성적범위(0~100)를 벗어났습니다.");
 					
 				} while (kor3 < 0 || 100 < kor3);
-			}
 			
-			else if (menu == 2) {
+				break;
+				
+			case 2 : 
 				//------- 성적 출력 부분 ------------------------
 				
 				total = kor1 + kor2 + kor3;
@@ -69,7 +73,6 @@ public class Program {
 				System.out.println("│     성적 출력            │");
 				System.out.println("└────────────────┘");
 				
-//			for (int n = 1; n <= 3; i++)
 				for (int i = 0; i < 3; i++) {
 					System.out.printf("\t국어%d : %3d\n", i + 1, kor1);
 				}
@@ -77,34 +80,17 @@ public class Program {
 				System.out.printf("\t총점 : %3d\n", total);
 				System.out.printf("\t평균 : %6.2f\n", avg);
 				
-			}
+				break;
+
+			case 3 : 
+				break 종료; //break는 break가 속한 반복문의 반복을 종료시킨다. //여기선 switch를 종료한다.
 			
-			else if (menu == 3) {
-				break; //break는 break가 속한 반복문의 반복을 종료시킨다.
-			}
-			else
+			default :
 				System.out.println("입력 오류 1~3까지만 입력할 수 있습니다.");
-			
+			}
 		}
+		
 		System.out.println("good bye~");
-		
-		
-		
-//		System.out.println(80); //80을 기호 80으로 이해
-//		System.out.write(80); //80을 코드값 80으로 이해
-//		System.out.flush(); //write 사용 시엔 반드시 flush 사용
-		
-		/* 18강
-		 * \b 백스페이스
-		 * \t 수평 탭 삽입
-		 * \n 새 행 삽입(new line)
-		 * \f 폼피드
-		 * \r 캐리지리턴(carrige return - 가장 왼쪽 위치로)
-		 * \' 홑 따옴표 삽입
-		 * \" 이중 따옴표 삽입
-		 * \\ 역슬래쉬 삽입
-		 * \는 단독으로 쓰일 수 없다. 그래서 역슬래시를 사용하고 싶다면 \\ 역슬래시를 연속으로 두개 쓰면 하나만 출력된다.
-		 */
 		
 	}
 
