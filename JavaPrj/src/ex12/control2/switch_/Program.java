@@ -83,7 +83,8 @@ public class Program {
 				break;
 
 			case 3 : 
-				break 종료; //break는 break가 속한 반복문의 반복을 종료시킨다. //여기선 switch를 종료한다.
+				break 종료; //break는 break가 속한 반복문의 반복을 종료시킨다. 
+				//여기선 switch를 종료한다.
 			
 			default :
 				System.out.println("입력 오류 1~3까지만 입력할 수 있습니다.");
