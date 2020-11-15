@@ -1,8 +1,8 @@
-package ex16.marray2;
+package ex15.marray;
 
 import java.util.Scanner;
 
-public class Program {
+public class Program2 {
 
 	public static void main(String[] args) {
 //		int kor1, kor2, kor3;
@@ -88,11 +88,11 @@ public class Program {
 				
 				for (int j = 0; j < 3; j++) {
 					System.out.printf("%d학년 국어성적-----------\n", j + 1);
-					total[j] = kors[3 * j] + kors[3 * j + 1] + kors[3 * j + 2];
+					total[j] = kors[3 * j + 0] + kors[3 * j + 1] + kors[3 * j + 2];
+					avg[j] = total[j] / 3.0f;
 					for (int i = 0; i < 3; i++) {
 						System.out.printf("\t국어%d : %3d\n", i + 1, kors[3 * j + i]);
 					}
-					avg[j] = total[j] / 3 ;
 					System.out.printf("\t총점 : %3d\n", total[j]);
 					System.out.printf("\t평균 : %6.2f\n", avg[j]);
 					System.out.println("────────────────────────────");
