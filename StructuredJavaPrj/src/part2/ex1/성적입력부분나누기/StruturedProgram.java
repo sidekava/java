@@ -10,10 +10,10 @@ public class StruturedProgram{
 	 */
 	
 	//전역변수는 static을 붙인다.
-	static int[] kors = new int[3];
 	
     public static void main(String[] args) {
     	
+    	int[] korList = new int[3];
 
     	int menu;
         boolean keepLoop = true;			
@@ -27,10 +27,10 @@ public class StruturedProgram{
 	        
 	        switch(menu) {	        
 	        case 1:
-	        	성적입력();
+	        	성적입력(korList);
 		        break;
 	        case 2:
-		        성적출력();
+		        성적출력(korList);
 		        break;
 	        case 3:
 	        	System.out.println("Bye~~");
@@ -59,7 +59,7 @@ public class StruturedProgram{
         return menu;
     }
     
-    static void 성적출력() {
+    static void 성적출력(int[] kors) {
         int total = 0;
         float avg;
         
@@ -82,24 +82,28 @@ public class StruturedProgram{
     	
     }
     
-    static void 성적입력() {
+    static void 성적입력(int[] kors) {
         Scanner scan = new Scanner(System.in);
-        //scan은 구지 main함수와 공유할 필요가 없기에 각각 선언한다. 
+        //scan은 구지 main함수와 공유할 필요가 없기에 각각 선언한다.
+        int kor;
     	
     	System.out.println("┌───────────────────────────┐");
         System.out.println("│           성적  입력                   │");
         System.out.println("└───────────────────────────┘");
         System.out.println();
        		        
-        for(int i=0; i<3; i++)
+        for(int i=0; i<3; i++) {
 	        do {
 		        System.out.printf("국어%d : ", i+1);
-		        kors[i] = scan.nextInt();
+		        kor = scan.nextInt();
 	        
-		        if(kors[i] < 0 || 100 < kors[i])
+		        if(kor < 0 || 100 < kor)
 		        	System.out.println("국어성적은 0~100까지의 범위만 입력이 가능합니다.");
 		        
-	        }while(kors[i] < 0 || 100 < kors[i]);
+	        }while(kor < 0 || 100 < kor);
+        
+	        kors[i] = kor;
+        }
         
         System.out.println("─────────────────────────────");
     	    
