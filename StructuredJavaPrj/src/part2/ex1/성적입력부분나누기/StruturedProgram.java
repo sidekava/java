@@ -23,14 +23,14 @@ public class StruturedProgram{
 		while(keepLoop)
 		{
 
-			menu = 메뉴입력();
+			menu = inputMenu();
 	        
 	        switch(menu) {	        
 	        case 1:
-	        	성적입력(korList);
+	        	inputKors(korList);
 		        break;
 	        case 2:
-		        성적출력(korList);
+		        printKors(korList);
 		        break;
 	        case 3:
 	        	System.out.println("Bye~~");
@@ -45,7 +45,7 @@ public class StruturedProgram{
 		}
     }
     
-    static int 메뉴입력() {
+    static int inputMenu() {
         Scanner scan = new Scanner(System.in);
 		System.out.println("┌───────────────────────────┐");
         System.out.println("│           메인 메뉴                   │");
@@ -59,7 +59,7 @@ public class StruturedProgram{
         return menu;
     }
     
-    static void 성적출력(int[] kors) {
+    static void printKors(int[] kors) {
         int total = 0;
         float avg;
         
@@ -82,7 +82,7 @@ public class StruturedProgram{
     	
     }
     
-    static void 성적입력(int[] kors) {
+    static void inputKors(int[] kors) {
         Scanner scan = new Scanner(System.in);
         //scan은 구지 main함수와 공유할 필요가 없기에 각각 선언한다.
         int kor;
