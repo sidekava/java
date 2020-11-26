@@ -1,4 +1,4 @@
-package part2.ex2.탑다운예제;
+package part2.ex3.데이터구조화;
 
 public class Program {
 	public static void main(String[] args) {
@@ -53,4 +53,11 @@ public class Program {
 		return 0;
 	}
 	
+	/*
+	 * 개념단위의 데이타 즉 entity라 한다.
+	 * 아래는 추측
+	 * 즉 데이터의 본질
+	 * 부가 데이터가 아닌 본 데이터
+	 * 
+	 * */
 }
