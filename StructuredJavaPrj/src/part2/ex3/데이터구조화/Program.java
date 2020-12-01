@@ -22,6 +22,7 @@ public class Program {
 	public static void main(String[] args) {
 
 		Exam[] exams = new Exam[3];
+		int current = 0;
 		
 		int menu;
         boolean keepLoop = true;			
@@ -34,10 +35,10 @@ public class Program {
 	        
 	        switch(menu) {	        
 	        case 1:
-	        	inputList(exams);
+	        	inputList(exams, current);
 		        break;
 	        case 2:
-		        printList(exams);
+		        printList(exams, current);
 		        break;
 	        case 3:
 	        	System.out.println("Bye~~");
@@ -52,13 +53,13 @@ public class Program {
 		
 	}
 	
-	private static void printList(Exam[] exams) {
+	private static void printList(Exam[] exams, int size) {
         System.out.println("┌───────────────────────────┐");
         System.out.println("│           성적  출력                   │");
         System.out.println("└───────────────────────────┘");
         System.out.println();		 
         
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < size; i++) {
         	Exam exam = exams[i];
         	int kor = exam.kor;
         	int eng = exam.eng;
@@ -77,7 +78,7 @@ public class Program {
         }
 	}
 
-	private static void inputList(Exam[] exams) {
+	private static void inputList(Exam[] exams, int current) {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("┌───────────────────────────┐");
@@ -85,45 +86,43 @@ public class Program {
         System.out.println("└───────────────────────────┘");
         System.out.println();
         
-        for (int i = 0; i < 3; i++) {
         	
-	        int kor, eng, math;
+        int kor, eng, math;
+        
+        do {
+	        System.out.printf("국어 : ");
+	        kor = scan.nextInt();
+        
+	        if(kor < 0 || 100 < kor)
+	        	System.out.println("국어성적은 0~100까지의 범위만 입력이 가능합니다.");
 	        
-	        do {
-		        System.out.printf("국어 : ");
-		        kor = scan.nextInt();
-	        
-		        if(kor < 0 || 100 < kor)
-		        	System.out.println("국어성적은 0~100까지의 범위만 입력이 가능합니다.");
-		        
-	        } while(kor < 0 || 100 < kor);
-	        
-	        do {
-	        	System.out.printf("영어 : ");
-	        	eng = scan.nextInt();
-	        	
-	        	if(eng < 0 || 100 < eng)
-	        		System.out.println("영어성적은 0~100까지의 범위만 입력이 가능합니다.");
-	        	
-	        } while(eng < 0 || 100 < eng);
-	        
-	        do {
-	        	System.out.printf("수학 : ");
-	        	math = scan.nextInt();
-	        	
-	        	if(math < 0 || 100 < math)
-	        		System.out.println("수학성적은 0~100까지의 범위만 입력이 가능합니다.");
-	        	
-	        } while(math < 0 || 100 < math);
-	        
-	        Exam exam = new Exam();
-	        exam.kor = kor;
-	        exam.eng = eng;
-	        exam.math = math;
-	        
-	        exams[i] = exam;
-        }
-		
+        } while(kor < 0 || 100 < kor);
+        
+        do {
+        	System.out.printf("영어 : ");
+        	eng = scan.nextInt();
+        	
+        	if(eng < 0 || 100 < eng)
+        		System.out.println("영어성적은 0~100까지의 범위만 입력이 가능합니다.");
+        	
+        } while(eng < 0 || 100 < eng);
+        
+        do {
+        	System.out.printf("수학 : ");
+        	math = scan.nextInt();
+        	
+        	if(math < 0 || 100 < math)
+        		System.out.println("수학성적은 0~100까지의 범위만 입력이 가능합니다.");
+        	
+        } while(math < 0 || 100 < math);
+        
+        Exam exam = new Exam();
+        exam.kor = kor;
+        exam.eng = eng;
+        exam.math = math;
+        
+        exams[current] = exam;
+		current++;
 	}
 
 	static int inputMenu() {
