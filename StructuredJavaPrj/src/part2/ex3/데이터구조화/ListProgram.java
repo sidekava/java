@@ -124,6 +124,17 @@ public class ListProgram {
         exam.eng = eng;
         exam.math = math;
         
+        Exam[] exams = list.exams;
+        int size = list.current;
+        
+    	if (exams.length == size) {
+    		Exam[] temp = new Exam[size + 5];
+    		for (int j = 0; j < size; j++) {
+    			temp[j] = exams[j];
+    		}
+    		list.exams = temp;
+    	}
+        
         list.exams[list.current] = exam;
 		list.current++;
 	}
@@ -136,7 +147,7 @@ public class ListProgram {
         System.out.println("\t1. 성적입력 ");
         System.out.println("\t2. 성적출력 ");
         System.out.println("\t3. 종료 ");
-        System.out.println("\t선택> ");
+        System.out.print("\t선택> ");
         int menu = scan.nextInt();
         
         return menu;
