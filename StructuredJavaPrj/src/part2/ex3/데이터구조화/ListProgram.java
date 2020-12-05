@@ -50,35 +50,37 @@ public class ListProgram {
 	       
 	        }
 		}   
-		
 	}
 	
 	private static void printList(ExamList list) {
-        System.out.println("┌───────────────────────────┐");
-        System.out.println("│           성적  출력                   │");
-        System.out.println("└───────────────────────────┘");
-        System.out.println();		 
-        
-        int size = list.current;
-        Exam[] exams = list.exams;
-        
-        for(int i = 0; i < size; i++) {
-        	Exam exam = exams[i];
-        	int kor = exam.kor;
-        	int eng = exam.eng;
-        	int math= exam.math;
-        	 
-        	int total = kor + eng + math;
-        	float avg = total/3.0f;
-        	
-        	System.out.printf("국어 : %3d\n", exam.kor);	        	
-        	System.out.printf("영어 : %3d\n", exam.eng);	        	
-        	System.out.printf("수학 : %3d\n", exam.math);	        	
-        	
-        	System.out.printf("총점 : %3d\n", total);
-        	System.out.printf("평균 : %6.2f\n", avg);
-        	System.out.println("─────────────────────────────");
-        }
+       printList(list, list.current);
+	}
+	
+	private static void printList(ExamList list, int size) {
+		System.out.println("┌───────────────────────────┐");
+		System.out.println("│           성적  출력                   │");
+		System.out.println("└───────────────────────────┘");
+		System.out.println();		 
+		
+		Exam[] exams = list.exams;
+		
+		for(int i = 0; i < size; i++) {
+			Exam exam = exams[i];
+			int kor = exam.kor;
+			int eng = exam.eng;
+			int math= exam.math;
+			
+			int total = kor + eng + math;
+			float avg = total/3.0f;
+			
+			System.out.printf("국어 : %3d\n", exam.kor);	        	
+			System.out.printf("영어 : %3d\n", exam.eng);	        	
+			System.out.printf("수학 : %3d\n", exam.math);	        	
+			
+			System.out.printf("총점 : %3d\n", total);
+			System.out.printf("평균 : %6.2f\n", avg);
+			System.out.println("─────────────────────────────");
+		}
 	}
 
 	private static void inputList(ExamList list) {
@@ -148,7 +150,7 @@ public class ListProgram {
         System.out.println("\t2. 성적출력 ");
         System.out.println("\t3. 종료 ");
         System.out.print("\t선택> ");
-        int menu = scan.nextInt();
+        int menu = scan.nextInt(); 
         
         return menu;
     }
