@@ -6,17 +6,17 @@ public class ExamList {
 	Exam[] exams;
 	int current;
 	
-	static void printList(ExamList list) {
-	       printList(list, list.current);
+	void printList() {
+	       this.printList(this.current);
 		}
 		
-	static void printList(ExamList list, int size) {
+	void printList(int size) {
 		System.out.println("┌───────────────────────────┐");
 		System.out.println("│           성적  출력                   │");
 		System.out.println("└───────────────────────────┘");
 		System.out.println();		 
 		
-		Exam[] exams = list.exams;
+		Exam[] exams = this.exams;
 		
 		for(int i = 0; i < size; i++) {
 			Exam exam = exams[i];
@@ -36,64 +36,64 @@ public class ExamList {
 			System.out.println("─────────────────────────────");
 		}
 	}
-
-	static void inputList(ExamList list) {
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("┌───────────────────────────┐");
-        System.out.println("│           성적  입력                   │");
-        System.out.println("└───────────────────────────┘");
-        System.out.println();
+	
+	void inputList() {
+	Scanner scan = new Scanner(System.in);
+	
+	System.out.println("┌───────────────────────────┐");
+    System.out.println("│           성적  입력                   │");
+    System.out.println("└───────────────────────────┘");
+    System.out.println();
+    
+    	
+    int kor, eng, math;
+    
+    do {
+        System.out.printf("국어 : ");
+        kor = scan.nextInt();
+    
+        if(kor < 0 || 100 < kor)
+        	System.out.println("국어성적은 0~100까지의 범위만 입력이 가능합니다.");
         
-        	
-        int kor, eng, math;
-        
-        do {
-	        System.out.printf("국어 : ");
-	        kor = scan.nextInt();
-        
-	        if(kor < 0 || 100 < kor)
-	        	System.out.println("국어성적은 0~100까지의 범위만 입력이 가능합니다.");
-	        
-        } while(kor < 0 || 100 < kor);
-        
-        do {
-        	System.out.printf("영어 : ");
-        	eng = scan.nextInt();
-        	
-        	if(eng < 0 || 100 < eng)
-        		System.out.println("영어성적은 0~100까지의 범위만 입력이 가능합니다.");
-        	
-        } while(eng < 0 || 100 < eng);
-        
-        do {
-        	System.out.printf("수학 : ");
-        	math = scan.nextInt();
-        	
-        	if(math < 0 || 100 < math)
-        		System.out.println("수학성적은 0~100까지의 범위만 입력이 가능합니다.");
-        	
-        } while(math < 0 || 100 < math);
-        
-        Exam exam = new Exam();
-        exam.kor = kor;
-        exam.eng = eng;
-        exam.math = math;
-        
-        Exam[] exams = list.exams;
-        int size = list.current;
-        
-    	if (exams.length == size) {
-    		Exam[] temp = new Exam[size + 5];
-    		for (int j = 0; j < size; j++) {
-    			temp[j] = exams[j];
-    		}
-    		list.exams = temp;
-    	}
-        
-        list.exams[list.current] = exam;
-		list.current++;
+    } while(kor < 0 || 100 < kor);
+    
+    do {
+    	System.out.printf("영어 : ");
+    	eng = scan.nextInt();
+    	
+    	if(eng < 0 || 100 < eng)
+    		System.out.println("영어성적은 0~100까지의 범위만 입력이 가능합니다.");
+    	
+    } while(eng < 0 || 100 < eng);
+    
+    do {
+    	System.out.printf("수학 : ");
+    	math = scan.nextInt();
+    	
+    	if(math < 0 || 100 < math)
+    		System.out.println("수학성적은 0~100까지의 범위만 입력이 가능합니다.");
+    	
+    } while(math < 0 || 100 < math);
+    
+    Exam exam = new Exam();
+    exam.kor = kor;
+    exam.eng = eng;
+    exam.math = math;
+    
+    Exam[] exams = this.exams;
+    int size = this.current;
+    
+	if (exams.length == size) {
+		Exam[] temp = new Exam[size + 5];
+		for (int j = 0; j < size; j++) {
+			temp[j] = exams[j];
+		}
+		this.exams = temp;
 	}
+    
+    this.exams[this.current] = exam;
+	this.current++;
+}
 
 	public static void init(ExamList list) {
 		// TODO Auto-generated method stub

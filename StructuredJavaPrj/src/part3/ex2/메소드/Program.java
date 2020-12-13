@@ -34,10 +34,11 @@ public class Program {
 	        
 	        switch(menu) {	        
 	        case 1:
-	        	ExamList.inputList(list);
+	        	list.inputList();
 		        break;
 	        case 2:
-	        	ExamList.printList(list);
+//	        	ExamList.printList(list);
+	        	list.printList();
 		        break;
 	        case 3:
 	        	System.out.println("Bye~~");
