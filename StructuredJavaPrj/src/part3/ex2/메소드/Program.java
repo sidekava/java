@@ -5,23 +5,19 @@ import java.util.Scanner;
 public class Program {
 	
 	/*
-	 * Exam[] exams = new Exam[3];
-	 * 위는 Exam이란 객체가 만들어진 것이 아니다. 
-	 * Exam형식의 배열 세 개가 만들어 진 것아다. 
-	 * 참조 변수가 세 개 만들어 진 것이다.
-	 * 그러므로 exams[0].kor = 30;이란 코드는 성립하지 못한다.
-	 * 왜냐면 exams[0]은 존재하지만 exam[0]이 가리키는 참조는 없다. 
-	 * 즉 exams[0]은 null이다.
-	 * exams[0].kor = 30; 가 성립하려면 아래와 같이 코드를 짜야 한다.
-	 * 	Exam[] exams = new Exam[3];
-		exams[0] = new Exam();
-		exams[0].kor = 30;
+	 * 캡슐화 되어있는 코드들이 있다.
+	 * 그 중 한 캡슐 안에 있는 코드가 다른 캡슐에 있는 데이터를 참조한다.
+	 * 그 후에 참조하고 있는 데이터가 변경되면 해당 데이터를 참조하는 다른 캡슐의 코드가 영향을 받게 된다.
+	 * 그래서 c언어에서는 그러지 말라고 교육을 했었다고 한다.
+	 * 
+	 * 저런 현상을 방지하기 위해 접근 제어 지시자를 사용한다.
+	 * 데이터에 private, protected, public 등 원하는 것을 사용하여 허락 또는 금지하게 코딩할 수 있다.
 	 * 
 	 */
 
 	public static void main(String[] args) {
 		ExamList list = new ExamList();
-		ExamList.init(list);
+		list.init();
 		
 		int menu;
         boolean keepLoop = true;			
