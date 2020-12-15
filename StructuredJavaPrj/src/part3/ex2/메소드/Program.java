@@ -13,11 +13,22 @@ public class Program {
 	 * 저런 현상을 방지하기 위해 접근 제어 지시자를 사용한다.
 	 * 데이터에 private, protected, public 등 원하는 것을 사용하여 허락 또는 금지하게 코딩할 수 있다.
 	 * 
+	 * 자바 객체 6강 생성자
+
+특정 클래스의 객체를 생성할 때 list.init을 통해 초기화를 진행했다. init은 아무때나 호출할 수 있다. 그래서 불완전한 초기화 작업이라 할 수 있다.
+
+생성자의 조건
+객체가 생성 되고 먼저 실행된다.
+생성 될 때 한번만 실행된다.
+
+new ExamList();
+new ExamList를 객체로 만들어 달라는 명령
+()는 객체를 초기화하는 생성자를 호출해달라는 명령
+
 	 */
 
 	public static void main(String[] args) {
 		ExamList list = new ExamList();
-		list.init();
 		
 		int menu;
         boolean keepLoop = true;			

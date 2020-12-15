@@ -95,7 +95,7 @@ public class ExamList {
 	this.current++;
 }
 
-	public void init() {
+	public ExamList() {
 		// TODO Auto-generated method stub
 		this.exams = new Exam[3];
 		this.current = 0;
