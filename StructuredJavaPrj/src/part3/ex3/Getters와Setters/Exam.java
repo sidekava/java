@@ -15,10 +15,20 @@ public class Exam {
 	 * 
 	 */
 	
-	
 	int kor;
 	int eng;
 	int math;
+	
+	public Exam() {
+		this(0, 0, 0);
+	}
+	
+	public Exam(int kor, int eng, int math) {
+		//여기서 this를 써주지 않으면 생성자의 kor에 값이 들어가는 것이 아닌 파라미터에 들어간다.
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
 	public int getKor() {
 		// TODO Auto-generated method stub
 		return kor;
@@ -37,6 +47,12 @@ public class Exam {
 	}
 	public void setKor(int kor) {
 		this.kor = kor;
+	}
+	public int total() {
+		return kor + eng + math;
+	}
+	public float avg() {
+		return this.total()/3.0f;
 	}
 
 }

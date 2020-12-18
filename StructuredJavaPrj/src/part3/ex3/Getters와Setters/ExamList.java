@@ -24,8 +24,10 @@ public class ExamList {
 			int eng = exam.getEng();
 			int math= exam.getMath();
 			
-			int total = kor + eng + math;
-			float avg = total/3.0f;
+			//total은 kor, eng, math를 더해서 만든다
+			// 그 값들은 모두 exam에서 왔으므로 exam에서 덧셈하는게 맞다.
+			int total = exam.total();
+			float avg = exam.avg();
 			
 			System.out.printf("국어 : %3d\n", exam.getKor());	        	
 			System.out.printf("영어 : %3d\n", exam.getEng());	        	
@@ -75,10 +77,12 @@ public class ExamList {
     	
     } while(math < 0 || 100 < math);
     
-    Exam exam = new Exam();
+/*    Exam exam = new Exam();
     exam.setKor(kor);//exam.kor = kor;
     exam.setEng(eng);
     exam.setMath(math);
+*/    
+    Exam exam = new Exam(kor, eng, math);
     
     Exam[] exams = this.exams;
     int size = this.current;
