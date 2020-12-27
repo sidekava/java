@@ -28,4 +28,9 @@ public class ExamList {
 		this.exams = new Exam[3];
 		this.current = 0;
 	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return current;
+	}
 }
