@@ -185,3 +185,6 @@ persnalJavaPrj/bin/persnalJavaPrj/FileContentModification.class
 .recommenders/caches/identified-project-coordinates.json
 .recommenders/caches/manual-mappings.json
 /.recommenders/
+note/.classpath
+note/.project
+note/.settings/org.eclipse.jdt.core.prefs
