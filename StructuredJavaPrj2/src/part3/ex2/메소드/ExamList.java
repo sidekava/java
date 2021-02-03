@@ -95,7 +95,7 @@ public class ExamList {
 		current++;
 	}
 
-	public void init() {
+	public ExamList() {
 		exams = new Exam[3];
 		current = 0;
 	}
