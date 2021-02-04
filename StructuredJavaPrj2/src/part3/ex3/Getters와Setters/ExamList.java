@@ -1,4 +1,4 @@
-package part3.ex2.메소드;
+package part3.ex3.Getters와Setters;
 
 import java.util.Scanner;
 
@@ -20,12 +20,12 @@ public class ExamList {
 		
 		for(int i = 0; i < size; i++) {
 			Exam exam = exams[i];
-			int kor = exam.kor;
-			int eng = exam.eng;
-			int math= exam.math;
+			int kor = exam.getKor();
+			int eng = exam.getEng();
+			int math= exam.getMath();
 			
-			int total = kor + eng + math;
-			float avg = total/3.0f;
+			int total = exam.total();//kor + eng + math;
+			float avg = exam.avg();//total/3.0f;
 			
 			System.out.printf("국어 : %3d\n", exam.kor);	        	
 			System.out.printf("영어 : %3d\n", exam.eng);	        	
@@ -75,11 +75,12 @@ public class ExamList {
         	
         } while(math < 0 || 100 < math);
         
-        Exam exam = new Exam();
-        exam.kor = kor;
-        exam.eng = eng;
-        exam.math = math;
-        
+/*      Exam exam = new Exam();
+        exam.setKor(kor);
+        exam.setEng(eng);
+        exam.setMath(math);
+*/        
+        Exam exam = new Exam(kor, eng, math);
         Exam[] exams = this.exams;
         int size = this.current;
         
