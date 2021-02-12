@@ -1,0 +1,22 @@
+자바 객체 12강 has a 상속
+
+캡슐들은 서로 사용하거나 사용되는 관계를 가지고 있다.
+
+ExamConsole은 Exam을 사용하고 있다.
+하지만 포함하고 있는 관계는 ExamConsole - ExamList - Exam이다.
+
+그래서 보통 ExamConsole - Exam으로 그려서 ExamList를 생략시킨다. 이러면 사용관계와 구성관계를 일치된다. 구성관계에서 ExamList는 묵시적으로 빠진다. 
+
+ExamConsole이 Exam을 가지고 있다. 이 관계를 Has A 관계(상속)라고 한다. 
+
+Composition Has A
+ExamConsole이 만들어질 때 필요한 Exam 객체를 다 가지고 있다.
+
+Aggregation Has A
+ExamConsole이 만들어질 때 Exam 객체가 없을 수 있다. 그 때 그 때 만들어서 집합적으로 갖는다.
+
+dependency
+함수 내에서만 사용하고 마는 객체들
+
+
+ 

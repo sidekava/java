@@ -25,6 +25,10 @@ public class ExamList {
 	}
 
 	public ExamList() {
+		/* Aggregation Has A 관계
+		 * new Exam[3]는 Exam 객체가 만들어진 상태가 아니다.
+		 * Exam 변수를 참조하기 위한 참조변수 세개짜리이다.
+		 */
 		exams = new Exam[3];
 		current = 0;
 	}

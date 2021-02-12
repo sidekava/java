@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class ExamConsole {
 	
-	private ExamList list = new ExamList();
+	//Composition Has A 일체형
+	private ExamList list;
+	
+	public ExamConsole() {
+		list = new ExamList();
+	}
 	
 	void printList() {
 	       printList(list.size());
