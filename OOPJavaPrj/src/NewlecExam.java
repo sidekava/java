@@ -1,6 +1,16 @@
 import part3.ex4.UI코드분리하기.Exam;
 
 public class NewlecExam extends Exam {
+	
+	public NewlecExam() {
+		this(0,0,0,0);
+	}
+	
+	public NewlecExam(int kor, int eng, int math, int com) {
+		super(kor, eng, math);
+		this.com = (com);
+	}
+	
 	private int com;
 
 	public int getCom() {
