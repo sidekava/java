@@ -194,3 +194,8 @@ StructuredJavaPrj2/.settings/org.eclipse.jdt.core.prefs
 GamePrj/.classpath
 GamePrj/.project
 GamePrj/.settings/org.eclipse.jdt.core.prefs
+*.classpath
+*.gitignore
+*.project
+*.springBeans
+*.prefs
