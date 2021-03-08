@@ -33,16 +33,12 @@ public abstract class Exam {
 	public void setMath(int math) {
 		this.math = math;
 	}
-	public float avg() {
-		// TODO Auto-generated method stub
-		return total()/3.0f;
-		
-	}
-	public int total() {
-		// TODO Auto-generated method stub
-		return kor + eng + math;
+	public abstract float avg();
+	
+	public abstract int total();
+	
+	protected int onTotal() {
+		return kor+eng+math;
 	}
 	
-	
-
 }
