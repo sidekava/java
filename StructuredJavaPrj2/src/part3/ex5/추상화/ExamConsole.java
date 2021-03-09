@@ -2,7 +2,7 @@ package part3.ex5.추상화;
 
 import java.util.Scanner;
 
-public class ExamConsole {
+public abstract class ExamConsole {
 	
 	//Composition Has A 일체형
 	private ExamList list;
@@ -11,11 +11,11 @@ public class ExamConsole {
 		list = new ExamList();
 	}
 	
-	void printList() {
-	       printList(list.size());
+	void print() {
+	       print(list.size());
 	}
 	
-	void printList(int size) {
+	void print(int size) {
 		System.out.println("┌───────────────────────────┐");
 		System.out.println("│           성적  출력                   │");
 		System.out.println("└───────────────────────────┘");
@@ -40,7 +40,7 @@ public class ExamConsole {
 		}
 	}
 
-	void inputList() {
+	void input() {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("┌───────────────────────────┐");
@@ -83,9 +83,15 @@ public class ExamConsole {
         exam.setEng(eng);
         exam.setMath(math);
 */        
-        Exam exam = new Exam(kor, eng, math);
+//        Exam exam = new Exam(kor, eng, math);
+        Exam exam = makeExam();
+        exam.setKor(kor);
+        exam.setEng(eng);
+        exam.setMath(math);
         
         list.add(exam);
 
 	}
+
+	protected abstract Exam makeExam();
 }
