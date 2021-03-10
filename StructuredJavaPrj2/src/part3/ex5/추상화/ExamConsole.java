@@ -32,7 +32,9 @@ public abstract class ExamConsole {
 			
 			System.out.printf("국어 : %3d\n", exam.kor);	        	
 			System.out.printf("영어 : %3d\n", exam.eng);	        	
-			System.out.printf("수학 : %3d\n", exam.math);	        	
+			System.out.printf("수학 : %3d\n", exam.math);	     
+			
+			onPrint(exam);
 			
 			System.out.printf("총점 : %3d\n", total);
 			System.out.printf("평균 : %6.2f\n", avg);
@@ -78,6 +80,7 @@ public abstract class ExamConsole {
         	
         } while(math < 0 || 100 < math);
         
+        
 /*      Exam exam = new Exam();
         exam.setKor(kor);
         exam.setEng(eng);
@@ -88,10 +91,15 @@ public abstract class ExamConsole {
         exam.setKor(kor);
         exam.setEng(eng);
         exam.setMath(math);
+        onInput(exam);
         
         list.add(exam);
 
 	}
+	
+	protected abstract void onPrint(Exam exam);
+
+	protected abstract void onInput(Exam exam);
 
 	protected abstract Exam makeExam();
 }
